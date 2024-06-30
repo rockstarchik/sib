@@ -10,7 +10,7 @@ def ss(n):
 
 
 maxi = 0
-for x in range(2030):
+for x in range(1,2030):
     a = 6 ** 2030 + 6 ** 100 - x
     maxi = max(ss(a),maxi)
 print(maxi)
