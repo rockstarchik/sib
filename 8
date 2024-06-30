@@ -1,0 +1,10 @@
+kol = 0
+for b1 in '0123456789abcd':
+    for b2 in '0123456789abcd':
+        for b3 in '0123456789abcd':
+            for b4 in '0123456789abcd':
+                for b5 in '0123456789abcd':
+                    sl = b1 + b2 + b3 + b4 + b5
+                    if sl.count('9') == 1 and (sl.count('b') + sl.count('c') + sl.count('d')) <= 3:
+                        kol = kol + 1
+print(kol)
