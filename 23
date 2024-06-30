@@ -1,0 +1,10 @@
+def fun(beg,end):
+    if beg < end:
+        return False
+    if beg == end:
+        return True
+    if beg > end:
+        return fun(beg - 2, end) + fun(beg//2,end)
+
+
+print(fun(32,8) * fun(8,1))
