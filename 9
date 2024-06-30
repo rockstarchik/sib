@@ -1,0 +1,10 @@
+file = open('9.txt')
+kol = 0
+for  s in file:
+    sp = [int(x) for x in s.split()]
+    spn = []
+    for i in range(len(sp)):
+        if sp.count(sp[i]) == 1:
+            spn.append(sp[i])
+    if len(spn) == 4:
+        kol = kol + 1
