@@ -1,0 +1,28 @@
+for x1 in range(10):
+    for x2 in range(10):
+        for x3 in range(10):
+            sl = '894' + str(x1) + '5' + str(x2) + '7' + str(x3)
+            if int(sl) % 8993 == 0 and int(sl) < 10 ** 10:
+                print(sl,int(sl)//8993)
+
+for x1 in range(10):
+    for x2 in range(10):
+        for x3 in range(10):
+            sl = '8904' + str(x1) + '5' + str(x2) + '7' + str(x3)
+            if int(sl) % 8993 == 0 and int(sl) < 10 ** 10:
+                print(sl,int(sl)//8993)
+
+for x1 in range(10):
+    for x2 in range(10):
+        for x3 in range(10):
+            sl = '89004' + str(x1) + '5' + str(x2) + '7' + str(x3)
+            if int(sl) % 8993 == 0 and int(sl) < 10 ** 10:
+                print(sl,int(sl)//8993)
+
+for x1 in range(10):
+    for x2 in range(10):
+        for x3 in range(10):
+            for b1 in range(1,100):
+                sl = '89' + str(b1) +'4' + str(x1) + '5' + str(x2) + '7' + str(x3)
+                if int(sl) % 8993 == 0 and int(sl) < 10 ** 10:
+                    print(sl,int(sl)//8993)
