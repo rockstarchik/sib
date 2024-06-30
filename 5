@@ -1,0 +1,13 @@
+for n in range(4,100):
+    r = bin(n)[2:]
+    if r.count('1') % 2 == 0:
+        r = r + '0'
+    else:
+        r = r + '1'
+    if r.count('1') % 2 == 0:
+        r = r + '0'
+    else:
+        r = r + '1'
+    rez = int(r,2)
+    if rez > 123:
+        print(rez)
