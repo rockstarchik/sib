@@ -1,0 +1,23 @@
+def fun(n):
+    if n % 10 == 7 and n > 999 and n < 100000 :
+        return True
+    return False
+
+
+
+file = open('17.txt')
+sp = []
+kol = 0
+mm = 0
+for s in file:
+    sp.append(int(s))
+maxi = 0
+for i in range(len(sp)):
+    if fun(sp[i]):
+        maxi = max(maxi,sp[i])
+for i in range(len(sp)-3):
+    if (fun(sp[i]) and fun(sp[i+1])) or (fun(sp[i]) and fun(sp[i+2])) or (fun(sp[i+2]) and fun(sp[i+1])) and (sp[i] + sp[i+1] + sp[i+2]) > maxi:
+        kol = kol + 1
+        mm = max(mm,sp[i] + sp[i+1] + sp[i+2])
+print(kol,mm)
+        
