@@ -1,0 +1,52 @@
+def game(k1,k2,hod):
+    if k1 + k2 >= 227 and hod == 2:
+        return True
+    if k1 + k2 < 227 and hod == 2:
+        return False
+    if k1 + k2 >= 227 and hod != 2:
+        return False
+    if hod == 0:
+        return game(k1+1,k2,hod + 1) or game(k1 * 2,k2,hod + 1) or game(k1,k2 + 1,hod + 1) or game(k1,k2 * 2,hod + 1)
+    if hod == 1:
+        return game(k1+1,k2,hod + 1) or game(k1 * 2,k2,hod + 1) or game(k1,k2 + 1,hod + 1) or game(k1,k2 * 2,hod + 1)
+
+
+for s in range(1,210):
+    if game(17,s,0):
+        print(s)
+
+
+def game(k1,k2,hod):
+    if k1 + k2 >= 227 and hod == 3:
+        return True
+    if k1 + k2 < 227 and hod == 3:
+        return False
+    if k1 + k2 >= 227 and hod != 3:
+        return False
+    if hod == 0 or hod == 2:
+        return game(k1+1,k2,hod + 1) or game(k1 * 2,k2,hod + 1) or game(k1,k2 + 1,hod + 1) or game(k1,k2 * 2,hod + 1)
+    if hod == 1:
+        return game(k1+1,k2,hod + 1) and game(k1 * 2,k2,hod + 1) and game(k1,k2 + 1,hod + 1) and game(k1,k2 * 2,hod + 1)
+
+
+for s in range(1,210):
+    if game(17,s,0):
+        print(s)
+
+
+def game(k1,k2,hod):
+    if k1 + k2 >= 227 and (hod == 4 or hod == 2):
+        return True
+    if k1 + k2 < 227 and hod == 2:
+        return False
+    if k1 + k2 >= 227 and hod != 2:
+        return False
+    if hod == 1 or hod == 3:
+        return game(k1+1,k2,hod + 1) or game(k1 * 2,k2,hod + 1) or game(k1,k2 + 1,hod + 1) or game(k1,k2 * 2,hod + 1)
+    if hod == 0 or hod == 2:
+        return game(k1+1,k2,hod + 1) and game(k1 * 2,k2,hod + 1) and game(k1,k2 + 1,hod + 1) and game(k1,k2 * 2,hod + 1)
+
+
+for s in range(1,210):
+    if game(17,s,0):
+        print(s)
